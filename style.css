@@ -1,0 +1,87 @@
+/* General */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.cairo-font {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+/* General */
+
+/* Main Section */
+main{
+    background-color: black;
+    color: white !important;
+    background-attachment: fixed;
+    height: 100vh;
+}
+@media (max-width:767px) {
+    main{
+        height: 50vh;
+    }
+}
+nav{
+    z-index: 2;
+}
+header{
+    background-image: url("../images/bg-2.svg");
+    background-attachment: fixed;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header::before{
+    content: "";
+    height: 56px;
+    width: 100%;
+    background-color: transparent;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+header p {
+    max-width: 450px;
+}
+/* Main Section */
+
+/* Members Section */
+.avatar{
+    height: 80px;
+    width: 80px;
+    top: -30px;
+    border: 7px solid black;
+    overflow: hidden;
+    border-radius: 50%;
+    left: 5px;
+}
+.avatar img{
+    height: 100%;
+}
+/* Members Section */
+
+/* Events Section */
+.events,.sign{
+    background-color: #f1f0f0;
+}
+.event img{
+    animation: event 3s infinite linear;
+}
+@keyframes event {
+    0%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(0,50px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+/* Events Section */
